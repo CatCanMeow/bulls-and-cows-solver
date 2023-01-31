@@ -16,7 +16,7 @@ bool A_test(string user_guess, int matched_count, string matched)
 		string r = mp[matched_count][i];
 		bool check = true;
 		for (int j = 0; i < 4; i++)
-			check = check && (r[j] == '0' || r[j] == '1' || s[j] == t[j]);
+			check = check && (r[j] == '0' || r[j] == '1' || user_guess[j] == matched_count[j]);
 		if (check)
 			ret = true;
 	}
