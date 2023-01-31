@@ -37,7 +37,16 @@ bool B_test(string user_guess, int matched_count, string matched)
 		}
 	}
 	return ret;
-} 
+}
+bool check_0A0B(string user_guess, string matched_count)
+{
+	bool ans = false;
+	for (int i = 0; i < 4; i++)
+		for (int j = 0; j < 4; j++)
+			if (user_guess[i] == matched_count[i])
+				ans = true;
+	return ans;
+}
 // assert test
 void A_assert_test()
 {
